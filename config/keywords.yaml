@@ -1,0 +1,91 @@
+# Role families, checked in this order; a posting gets the first family whose terms AND geography match.
+#
+# Matching: case- and accent-insensitive; "-", "_" and "/" count as spaces. A term must start at a word
+# boundary; terms of 4 characters or fewer must also end at one (so "statistician" doesn't match
+# "biostatistician", "benchmark" matches "benchmarking", but "coa" doesn't match "coach").
+#
+#   title:         a match in the title assigns the family.
+#   description:   a match in the description assigns the family only if the title also contains one of
+#                  `title_context` (keeps a passing mention in an unrelated ad from counting).
+#   exclude:       title terms that veto the family.
+#   regions:       allowed region tags ("all" = anywhere in Switzerland).
+
+families:
+  ai_validation:
+    label: AI validation and assurance
+    regions: all
+    title: [ai validation, ai model validation, ml model validation, validation of ai, ai assurance, ai audit,
+            ai governance, ai risk, responsible ai, trustworthy ai, ai ethics, ai compliance, ai act, ai quality,
+            ki validierung, ki governance, ki risiko, ki risiken, verantwortungsvolle ki, vertrauenswurdige ki,
+            gouvernance ia, gouvernance de l ia, gouvernance de l'ia, validation ia, ia de confiance, ia responsable,
+            validation de modeles d ia, validation des modeles d ia]
+    description: [ai governance, eu ai act, responsible ai, trustworthy ai, ai assurance, validation of ai models,
+                  ai model validation, ai risk management, ki governance, gouvernance de l ia, gouvernance ia]
+    title_context: [governance, validation, assurance, audit, model, ai, ki, ia, ml, machine learning]
+    exclude: []
+
+  model_risk:
+    label: Model risk
+    regions: all
+    title: [model risk, mrm, model governance, model validation, model validator, model review, validation quant,
+            quant validation, quantitative validation, model risk management, modellrisiko, modellvalidierung,
+            modell validierung, risque de modele, risque de modeles, validation de modeles, validation des modeles]
+    description: [model risk management, model risk, sr 11 7, model validation, modellrisiko, risque de modele]
+    title_context: [quant, quantitative, validation, validator, model, modell, modele, mrm]
+    exclude: []
+
+  ai_evaluation:
+    label: AI evaluation
+    regions: all
+    title: [llm evaluation, ai evaluation, model evaluation, evals, evaluation engineer, evaluation scientist,
+            benchmark, red teaming, ai red team, llm red team, ai safety]
+    description: [llm evaluation, evaluation of llms, evaluating llms, evals, red teaming, ai safety,
+                  llm benchmarking, model evaluation]
+    title_context: [ai, ml, machine learning, llm, genai, research, engineer, scientist, data]
+    exclude: [penetration, offensive security, cyber, index, benchmark administrator, compensation, pricing]
+
+  pharma_control:
+    label: Pharma control group
+    regions: all
+    title: [biostatistician, biostatistics, biostatistik, biostatisticien, biostatisticienne, biometrics,
+            psychometric, psychometrician, psychometrie, clinical outcome assessment, heor, health economics,
+            outcomes research, coa]
+    description: [clinical outcome assessment, psychometric, psychometrics]
+    title_context: [statistic, scientist, outcome, measurement, psychometric, clinical]
+    exclude: [certificate of analysis]
+
+  data_science:
+    label: Data science core (Bern and Romandie)
+    regions: [Bern, Romandie]
+    title: [data scientist, data science, statistician, machine learning engineer, ml engineer,
+            machine learning scientist, applied scientist, statistiker, statistikerin, datenwissenschaftler,
+            scientifique des donnees, data scientiste, statisticien, statisticienne, ingenieur machine learning]
+    description: []
+    title_context: []
+    exclude: []
+
+# Sent to ATSs with server-side search (Workday, SuccessFactors). Keep it short: each term costs requests.
+search_terms:
+  - AI validation
+  - model validation
+  - model risk
+  - AI governance
+  - AI assurance
+  - responsible AI
+  - AI risk
+  - AI evaluation
+  - LLM
+  - red teaming
+  - data scientist
+  - statistician
+  - machine learning
+  - biostatistician
+  - psychometric
+  - HEOR
+  - outcomes research
+  - Modellrisiko
+  - KI
+  - Statistiker
+  - statisticien
+  - intelligence artificielle
+  - künstliche Intelligenz

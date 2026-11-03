@@ -1,0 +1,75 @@
+# Region tagging. Matching is case- and accent-insensitive on whole words.
+# A posting is Swiss when its ATS country is CH / Switzerland, or its location names a Swiss place below.
+
+canton_region:
+  BE: Bern
+  GE: Romandie
+  VD: Romandie
+  NE: Romandie
+  FR: Romandie
+  VS: Romandie
+  JU: Romandie
+  ZH: Zurich
+  BS: Basel
+  BL: Basel
+  # every other canton -> "Other CH"
+
+# Words that mark a location string as Swiss. Two-letter canton codes are only trusted when one of these
+# is present too (FR = France, BE = Belgium, ...).
+swiss_markers: [switzerland, schweiz, suisse, svizzera, svizra, "CH", confoederatio helvetica]
+
+cities:
+  ZH: [zurich, zuerich, zurigo, winterthur, uster, dubendorf, duebendorf, wallisellen, opfikon, glattbrugg, kloten,
+       schlieren, adliswil, thalwil, horgen, ruschlikon, rueschlikon, oerlikon, altstetten, dietikon, wadenswil,
+       meilen, kusnacht, zollikon, bulach, regensdorf, affoltern, stafa]
+  BS: [basel, bale, basilea, riehen]
+  BL: [allschwil, liestal, pratteln, muttenz, reinach, munchenstein, binningen, arlesheim, birsfelden]
+  BE: [bern, berne, berna, biel, bienne, thun, koniz, koeniz, ittigen, burgdorf, zollikofen, liebefeld, worblaufen,
+       ostermundigen, langenthal, muri bei bern, wabern, interlaken, mittelhausern]
+  GE: [geneva, geneve, genf, ginevra, carouge, meyrin, plan-les-ouates, vernier, lancy, grand-saconnex, satigny,
+       chene-bourg, thonex, onex, cointrin]
+  VD: [lausanne, vevey, montreux, nyon, morges, yverdon, yverdon-les-bains, renens, ecublens, epalinges, orbe,
+       la tour-de-peilz, rolle, prilly, pully, gland, bussigny, crissier, aigle, payerne, le mont-sur-lausanne,
+       chavannes, st-sulpice, saint-sulpice, etoy, aubonne, coppet]
+  NE: [neuchatel, neuenburg, la chaux-de-fonds, le locle, marin-epagnier, boudry, peseux, hauterive]
+  FR: [fribourg, bulle, marly, villars-sur-glane, granges-paccot, givisiez, murten, morat, dudingen]
+  VS: [sion, sitten, martigny, monthey, visp, brig, sierre, siders, conthey, collombey]
+  JU: [delemont, porrentruy]
+  LU: [lucerne, luzern, kriens, emmen, ebikon, sursee, root]
+  ZG: [zug, zoug, baar, cham, rotkreuz, risch, steinhausen, hunenberg]
+  SG: [st. gallen, st gallen, sankt gallen, rapperswil, rapperswil-jona, wil, buchs sg, gossau]
+  AG: [aarau, baden, wettingen, dattwil, brugg, kaiseraugst, rheinfelden ag, stein ag, lenzburg, wohlen, zofingen,
+       spreitenbach, villigen]
+  TI: [lugano, bellinzona, locarno, mendrisio, manno, chiasso, giubiasco]
+  GR: [chur, davos, landquart, ilanz, st. moritz]
+  SH: [schaffhausen, neuhausen]
+  SO: [solothurn, olten, grenchen]
+  TG: [frauenfeld, kreuzlingen, weinfelden]
+  SZ: [schwyz, pfaffikon sz, freienbach, wollerau, lachen, einsiedeln]
+  AR: [herisau]
+  AI: [appenzell]
+  GL: [glarus]
+  OW: [sarnen, alpnach]
+  NW: [stans]
+  UR: [altdorf]
+
+# Evidence that a location is outside Switzerland (country names, major cities).
+foreign:
+  [united states, usa, u.s., united kingdom, uk, england, scotland, germany, deutschland, france, italy, italia, spain,
+   espana, portugal, netherlands, belgium, poland, india, china, singapore, hong kong, japan, australia, canada,
+   mexico, brazil, ireland, luxembourg, austria, osterreich, czech, czechia, hungary, romania, serbia, slovakia,
+   slovenia, croatia, bulgaria, greece, turkey, turkiye, israel, uae, united arab emirates, south africa, malaysia,
+   philippines, sweden, denmark, norway, finland, argentina, colombia, chile, moldova, ukraine, egypt, saudi arabia,
+   qatar, taiwan, korea, vietnam, thailand, indonesia, monaco, liechtenstein, bahamas, bermuda, cayman,
+   london, new york, paris, frankfurt, munich, munchen, berlin, hamburg, madrid, barcelona, milan, milano, rome,
+   amsterdam, dublin, warsaw, krakow, wroclaw, prague, budapest, bucharest, hyderabad, bangalore, bengaluru, pune,
+   mumbai, chennai, gurgaon, gurugram, noida, tokyo, sydney, melbourne, toronto, montreal, boston, cambridge,
+   east hanover, chicago, san francisco, kuala lumpur, manila, shanghai, beijing, lisbon, porto, vienna, wien,
+   brussels, edinburgh, belgrade, chisinau, cluj, sofia, athens, istanbul, tel aviv, dubai, abu dhabi, riyadh, doha,
+   johannesburg, sao paulo, buenos aires, bogota, atlanta, schaumburg, hartford, armonk, raleigh, durham, morristown,
+   penzberg, mannheim, grenzach, grenzach-wyhlen, huningue, saint-louis, vaduz, monaco, luxembourg city, eschborn,
+   dusseldorf, cologne, koln, stuttgart, lyon, nice, sophia antipolis, annecy, lille, toulouse, krakow, gdansk,
+   south san francisco, basking ridge, princeton, new jersey, california, texas, florida, massachusetts, remote us,
+   remote uk, bratislava, ljubljana, zagreb, riga, vilnius, tallinn, valencia, malaga, seville, turin, torino,
+   bologna, florence, naples, the hague, rotterdam, utrecht, eindhoven, antwerp, ghent, copenhagen, stockholm,
+   oslo, helsinki, gothenburg, aarhus, dubai, cairo, casablanca, lagos, nairobi, santiago, lima, quito, panama]

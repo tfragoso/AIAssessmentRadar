@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hand-written to the documented Personio XML shape (live boards checked were empty). -->
+<workzag-jobs>
+  <position>
+    <id>1234567</id>
+    <subcompany>Example AG</subcompany>
+    <office>Zürich</office>
+    <additionalOffices><office>Lausanne</office></additionalOffices>
+    <department>Risk</department>
+    <name>AI Governance Specialist (80-100%)</name>
+    <jobDescriptions>
+      <jobDescription>
+        <name>Your profile</name>
+        <value><![CDATA[<ul><li>3+ years of experience in model validation</li><li>Fluent German and English, French is a plus</li></ul>]]></value>
+      </jobDescription>
+    </jobDescriptions>
+    <employmentType>permanent</employmentType>
+    <seniority>experienced</seniority>
+    <schedule>full-time</schedule>
+    <createdAt>2026-10-20T08:00:00+00:00</createdAt>
+  </position>
+</workzag-jobs>

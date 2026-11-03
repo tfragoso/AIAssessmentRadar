@@ -1,0 +1,261 @@
+{
+ "medium_id": "1002532",
+ "medium_name": null,
+ "offset": 0,
+ "total": 3,
+ "jobs": [
+  {
+   "id": "10243825",
+   "hk_id": "1008545",
+   "viewkey": "b3ba8a92-94e4-4652-8e65-60c031c41ec2",
+   "title": "Young Insurance Professional (w/m/d) 2027 - Generalagentur Basel Süd",
+   "attributes": {
+    "50": [
+     "Helvetia"
+    ],
+    "40": [
+     "Nachwuchsstellen: Lehrstellen, Praktika, Trainee"
+    ],
+    "20": [
+     "Schweiz"
+    ],
+    "20_1189523": [
+     "Basel (BS/BL)"
+    ],
+    "10": [
+     "Schüler:innen"
+    ]
+   },
+   "szas": {
+    "sza_pensum.max": "100",
+    "sza_location.boundingBox": "{\"x1\":7.5859708,\"y1\":47.5536240,\"x2\":7.5861708,\"y2\":47.5538240}",
+    "sza_apply_link": "https://jobs.helvetia.com/successfactors/EMEA_PREMIUM/Helvetia/switzerland/de/apply?id=19904",
+    "sza_location.country": "Schweiz",
+    "sza_company_profil": "Wir glauben an Zusammenarbeit auf Augenhöhe, gegenseitiges Vertrauen und Menschen, die Verantwortung übernehmen wollen. Unterschiedliche Perspektiven helfen uns, bessere Lösungen zu entwickeln - für unsere Kundinnen und Kunden genauso wie für uns als Team.",
+    "sza_requirements": "<ul><li>Du verfügst über eine gymnasiale Maturität, eine Berufs- oder Fachmaturität oder eine abgeschlossene kaufmännische Lehre mit eidgenössischem Fähigkeitszeugnis (EFZ) </li><li>Deine schnelle Auffassungsgabe und dein logisches Denkvermögen zählen zu deinen Stärken</li><li>Du interessierst dich für Menschen und deren Umgang mit Risiken und Sicherheit</li><li>Du bringst die Offenheit mit, Neues zu entdecken und mit verschiedenen Menschen zusammenzuarbeiten</li></ul><br/> <br/>Zeig uns, was in dir steckt: Lade <strong>deine Zeugnisse</strong> direkt mit hoch und vervollständige deine Bewerbung.",
+    "sza_workplace": "Helvetia\nGeneralagentur Basel Süd\nAeschengraben 21 \n4051 Basel",
+    "sza_field_of_activity": "Nachwuchsstellen: Lehrstellen, Praktika, Trainee",
+    "sza_pensum": "Vollzeit",
+    "sza_title": "Young Insurance Professional (w/m/d) 2027 - Generalagentur Basel Süd",
+    "sza_contact": "Werkstudentin Recruiting",
+    "sza_company_logo": "ce28d45e65610d80217db884e3a6beee",
+    "sza_workplace.boundingBox": "{\"x1\":7.5884761,\"y1\":47.5594986,\"x2\":7.5886761,\"y2\":47.5596986}",
+    "sza_location.city": "Basel Süd",
+    "sza_role": "Praktikant/in",
+    "sza_industry": "Versicherungen",
+    "sza_employment_type": "Schüler:innen",
+    "sza_pensum.min": "100",
+    "sza_image": "785ca4525639a408eb0a44534db06f92",
+    "sza_location.zip": "4051",
+    "sza_starting_date": "nach Vereinbarung",
+    "sza_introduction": "Bei uns im #TeamHelvetia musst du nicht schon alles können. Viel wichtiger ist, dass du neugierig bist und Lust hast, Neues auszuprobieren. Von Anfang an übernimmst du gemeinsam mit deinem Team echte Aufgaben, bringst deine Ideen ein und wächst Schritt für Schritt an neuen Herausforderungen. Wir trauen dir etwas zu und begleiten dich auf deinem Weg.",
+    "sza_workplace.city": "Generalagentur Basel Süd",
+    "sza_tasks": "<ul><li>Du lernst Schritt für Schritt, wie Versicherungen funktionieren und arbeitest bei verschiedenen Aufgaben mit – zum Beispiel bei Offerten, Schadenfällen oder Kundenanfragen</li><li>Du bist mit Kundinnen und Kunden sowie Kolleginnen und Kollegen in Kontakt – per Telefon, Mail oder persönlich</li><li>Du arbeitest neben dem Tagesgeschäft auch bei spannenden Projekten mit und bringst deine eigenen Ideen ein</li><li>Du gestaltest deine Entwicklung aktiv mit und findest heraus, welche Aufgaben und Themen dir besonders Spass machen</li><li>Dauer: September 2027 bis August 2028</li></ul>"
+   },
+   "links": {
+    "directlink": "https://jobs.helvetia.com/offene-stellen/young-insurance-professional-w-m-d-2027-generalagentur-basel-sued/b3ba8a92-94e4-4652-8e65-60c031c41ec2"
+   },
+   "start_date": "2026-11-01T23:00:00Z",
+   "end_date": "2036-10-29T22:59:59Z",
+   "last_modification_timestamp": "2026-11-03T18:08:12.155537Z",
+   "language": "de"
+  },
+  {
+   "id": "10246759",
+   "hk_id": "1008545",
+   "viewkey": "6463fdf7-e092-4ab2-9a7c-7b7a4775dc17",
+   "title": "Young Insurance Professional (tous genres) 2027 - Agence générale La Côte",
+   "attributes": {
+    "50": [
+     "Helvetia"
+    ],
+    "40": [
+     "Nachwuchsstellen: Lehrstellen, Praktika, Trainee"
+    ],
+    "20": [
+     "Schweiz"
+    ],
+    "20_1189523": [
+     "Waadt"
+    ],
+    "10": [
+     "Schüler:innen"
+    ]
+   },
+   "szas": {
+    "sza_pensum.max": "100",
+    "sza_location.boundingBox": "{\"x1\":6.4942820,\"y1\":46.5128601,\"x2\":6.4944820,\"y2\":46.5130601}",
+    "sza_apply_link": "https://jobs.helvetia.com/successfactors/EMEA_PREMIUM/Helvetia/switzerland/fr/apply?id=19910",
+    "sza_location.country": "Suisse",
+    "sza_company_profil": "Nous croyons en une collaboration d&#39;égal à égal, impliquant une confiance mutuelle, avec des personnes qui veulent prendre des responsabilités. La diversité des points de vue nous aide à trouver de meilleures solutions, tant pour notre clientèle qu&#39;au sein de nos équipes.",
+    "sza_requirements": "<ul><li>Tu possèdes l&#39;un des diplômes suivants : maturité gymnasiale, maturité spécialisée, apprentissage avec diplôme de maturité professionnelle ou diplôme d&#39;école de commerce avec maturité professionnelle</li><li>Ta compréhension rapide et ta capacité de raisonnement logique font partie de tes points forts</li><li>Tu t&#39;intéresses aux gens et à la façon dont ils gèrent les risques et la sécurité</li><li>Tu apportes l&#39;ouverture d&#39;esprit nécessaire pour découvrir de nouvelles choses et travailler avec des personnes différentes</li></ul><br/> <br/>Montre-nous ce dont tu es capable: télécharge directement <strong>tes bulletins scolaires</strong> et complète ainsi ta candidature.",
+    "sza_workplace": "Helvetia \nAgence principale Morges\nRue de la Gare 3\n1110 Morges",
+    "sza_field_of_activity": "Postes de relève: places d’apprentissage, stages, trainee",
+    "sza_title": "Young Insurance Professional (tous genres) 2027 - Agence générale La Côte",
+    "sza_contact": "Recruiting Partner",
+    "sza_company_logo": "ce28d45e65610d80217db884e3a6beee",
+    "sza_workplace.boundingBox": "{\"x1\":6.4960301,\"y1\":46.5087127,\"x2\":6.4962301,\"y2\":46.5089127}",
+    "sza_location.city": "Morges",
+    "sza_salary": "CHF 3'250",
+    "sza_industry": "Assurances",
+    "sza_employment_type": "Élèves",
+    "sza_pensum.min": "100",
+    "sza_image": "b8ea00e22b3f4e4ac6a6ded32365ae0c",
+    "sza_location.zip": "1110",
+    "sza_starting_date": "à convenir",
+    "sza_introduction": "Chez nous, au sein de la #TeamHelvetia, tu n&#39;as pas besoin de tout savoir dès le départ. Ce qui compte avant tout, c&#39;est ta curiosité et ton envie de découvrir, d&#39;apprendre et d&#39;essayer de nouvelles choses. Dès le début, tu reçois de vraies responsabilités au sein de ton équipe, tu apportes tes idées et tu progresses pas à pas en relevant de nouveaux défis. Nous te faisons confiance et t&#39;accompagnons tout au long de ton parcours.",
+    "sza_workplace.city": "Agence principale  Morges",
+    "sza_tasks": "<ul><li>Tu apprends progressivement comment fonctionnent les assurances et participes à différentes tâches, par exemple dans le traitement des offres, des sinistres ou des demandes de la clientèle</li><li>Tu es en contact avec nos client·e·s ainsi qu&#39;avec tes collègues, par téléphone, par e-mail ou en personne</li><li>En plus de tes activités quotidiennes, tu participes à des projets passionnants et y apportes tes propres idées</li><li>Tu participes activement à ton développement et découvres les tâches et les thématiques qui te plaisent particulièrement</li><li>Durée: de septembre 2027 à août 2028</li></ul>"
+   },
+   "links": {
+    "directlink": "https://jobs.helvetia.com/offene-stellen/young-insurance-professional-tous-genres-2027-agence-generale-la-cote/6463fdf7-e092-4ab2-9a7c-7b7a4775dc17"
+   },
+   "start_date": "2026-11-02T09:09:38Z",
+   "end_date": "2036-10-29T22:59:59Z",
+   "last_modification_timestamp": "2026-11-03T18:00:10.276156Z",
+   "language": "fr"
+  },
+  {
+   "id": "10246729",
+   "hk_id": "1008545",
+   "viewkey": "d619586f-4aac-4a72-b530-2aefeddc2481",
+   "title": "Young Insurance Professional (tous genres) 2027 - Service des sinistres choses",
+   "attributes": {
+    "50": [
+     "Helvetia"
+    ],
+    "40": [
+     "Nachwuchsstellen: Lehrstellen, Praktika, Trainee"
+    ],
+    "20": [
+     "Schweiz"
+    ],
+    "20_1189523": [
+     "Freiburg"
+    ],
+    "10": [
+     "Schüler:innen"
+    ]
+   },
+   "szas": {
+    "sza_pensum.max": "100",
+    "sza_location.boundingBox": "{\"x1\":7.1243891,\"y1\":46.8147649,\"x2\":7.1245891,\"y2\":46.8149649}",
+    "sza_apply_link": "https://jobs.helvetia.com/successfactors/EMEA_PREMIUM/Helvetia/switzerland/fr/apply?id=19908",
+    "sza_location.country": "Suisse",
+    "sza_company_profil": "Nous croyons en une collaboration d&#39;égal à égal, impliquant une confiance mutuelle, avec des personnes qui veulent prendre des responsabilités. La diversité des points de vue nous aide à trouver de meilleures solutions, tant pour notre clientèle qu&#39;au sein de nos équipes.",
+    "sza_requirements": "<ul><li>Tu possèdes l&#39;un des diplômes suivants : maturité gymnasiale, maturité spécialisée, apprentissage avec diplôme de maturité professionnelle ou diplôme d&#39;école de commerce avec maturité professionnelle</li><li>Ta compréhension rapide et ta capacité de raisonnement logique font partie de tes points forts</li><li>Tu t&#39;intéresses aux gens et à la façon dont ils gèrent les risques et la sécurité</li><li>Tu apportes l&#39;ouverture d&#39;esprit nécessaire pour découvrir de nouvelles choses et travailler avec des personnes différentes</li></ul><br/> <br/>Montre-nous ce dont tu es capable: télécharge directement <strong>tes bulletins scolaires</strong> et complète ainsi ta candidature.",
+    "sza_workplace": "Helvetia\nAgence générale Fribourg\nRoute du Mont Carmel 2\n1762 Givisiez",
+    "sza_field_of_activity": "Postes de relève: places d’apprentissage, stages, trainee",
+    "sza_title": "Young Insurance Professional (tous genres) 2027 - Service des sinistres choses",
+    "sza_contact": "Recruiting Partner",
+    "sza_company_logo": "ce28d45e65610d80217db884e3a6beee",
+    "sza_workplace.boundingBox": "{\"x1\":7.1367133,\"y1\":46.8136026,\"x2\":7.1369133,\"y2\":46.8138026}",
+    "sza_location.city": "Givisiez",
+    "sza_salary": "CHF 3'250",
+    "sza_industry": "Assurances",
+    "sza_employment_type": "Élèves",
+    "sza_pensum.min": "100",
+    "sza_image": "b451d14a09f1eaa7c7e08645a7d933b7",
+    "sza_location.zip": "1762",
+    "sza_starting_date": "à convenir",
+    "sza_introduction": "Chez nous, au sein de la #TeamHelvetia, tu n&#39;as pas besoin de tout savoir dès le départ. Ce qui compte avant tout, c&#39;est ta curiosité et ton envie de découvrir, d&#39;apprendre et d&#39;essayer de nouvelles choses. Dès le début, tu reçois de vraies responsabilités au sein de ton équipe, tu apportes tes idées et tu progresses pas à pas en relevant de nouveaux défis. Nous te faisons confiance et t&#39;accompagnons tout au long de ton parcours.",
+    "sza_workplace.city": "Agence générale Fribourg",
+    "sza_tasks": "<ul><li>Tu apprends progressivement comment fonctionnent les assurances et participes à différentes tâches, par exemple dans le traitement des offres, des sinistres ou des demandes de la clientèle</li><li>Tu es en contact avec nos client·e·s ainsi qu&#39;avec tes collègues, par téléphone, par e-mail ou en personne</li><li>En plus de tes activités quotidiennes, tu participes à des projets passionnants et y apportes tes propres idées</li><li>Tu participes activement à ton développement et découvres les tâches et les thématiques qui te plaisent particulièrement</li><li>Durée: de septembre 2027 à août 2028</li></ul>"
+   },
+   "links": {
+    "directlink": "https://jobs.helvetia.com/offene-stellen/young-insurance-professional-tous-genres-2027-service-des-sinistres-choses/d619586f-4aac-4a72-b530-2aefeddc2481"
+   },
+   "start_date": "2026-11-02T08:56:02Z",
+   "end_date": "2036-10-29T22:59:59Z",
+   "last_modification_timestamp": "2026-11-03T18:03:05.389347Z",
+   "language": "fr"
+  }
+ ],
+ "filtercount": {
+  "50": {
+   "1259052": 1,
+   "n/a": 1,
+   "1259050": 170
+  },
+  "40": {
+   "1189517": 1,
+   "1189507": 85,
+   "1189505": 4,
+   "1189513": 1,
+   "1189522": 10,
+   "1189511": 6,
+   "1189578": 6,
+   "1189512": 5,
+   "1189520": 7,
+   "1748976": 1,
+   "1748977": 6,
+   "1189584": 5,
+   "1748975": 13,
+   "1189582": 4,
+   "1748978": 31,
+   "1189580": 3,
+   "1189581": 2
+  },
+  "20": {
+   "1211493": 1,
+   "1211492": 2,
+   "1425193": 8,
+   "1211491": 3,
+   "1211490": 1,
+   "1192769": 2,
+   "1192768": 6,
+   "1192727": 16,
+   "1192726": 5,
+   "1192729": 5,
+   "1748979": 1,
+   "1192732": 24,
+   "1192734": 6,
+   "1194033": 13,
+   "1223949": 1,
+   "1192758": 2,
+   "1192757": 13,
+   "1189523": 143,
+   "1192718": 28,
+   "1192719": 7,
+   "1192761": 5,
+   "1192760": 1,
+   "1192763": 1,
+   "1192762": 1,
+   "1192721": 3,
+   "1192765": 1,
+   "1192720": 4,
+   "1192723": 6,
+   "1192767": 2,
+   "1192766": 10,
+   "1192722": 5,
+   "1194063": 1,
+   "1211489": 1,
+   "1194061": 1,
+   "1194058": 1,
+   "1192756": 18,
+   "1194053": 3,
+   "1194050": 1,
+   "1748983": 3,
+   "1748984": 12,
+   "1192735": 4,
+   "1748981": 2,
+   "1748982": 1,
+   "1748985": 3,
+   "1748986": 1,
+   "1194049": 2,
+   "1194047": 2,
+   "1194048": 1,
+   "1192745": 1,
+   "1192744": 1,
+   "1194046": 2,
+   "1194043": 2
+  },
+  "10": {
+   "1189591": 6,
+   "1189588": 4,
+   "1189589": 130,
+   "1189586": 2,
+   "1189585": 30
+  }
+ }
+}

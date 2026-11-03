@@ -1,0 +1,212 @@
+# Tracked employers. Add or remove an employer here; no code change needed.
+#
+# Common keys:
+#   name, segment     shown in outputs
+#   ats               adapter: workday | sfcareer | prospective | htmllist | oracle | greenhouse | lever | ashby |
+#                     personio | smartrecruiters | manual.  "unknown" / "blocked" = not fetched (listed in README).
+#   fetch_abroad      also keep non-Swiss postings whose title matches a family (for the offshoring flag)
+#   default_country   CH for Swiss-only boards whose postings may lack a country
+#   agency            true if every posting is via a staffing agency
+#   note              why an employer isn't covered / anything odd
+#
+# Adapter keys:
+#   workday:      tenant, wd (wd1/wd3/wd5...), site            -> {tenant}.{wd}.myworkdayjobs.com/{site}
+#   sfcareer:     base (SuccessFactors career site root, e.g. https://careers.ey.com/ey)
+#   prospective:  medium_id (from ohws.prospective.ch/public/v1/medium/{id})
+#   htmllist:     listing (url or list), link_pattern (regex on hrefs), prefilter (title match on link text)
+#   oracle:       host, site (URL code), site_number
+#   greenhouse / lever / ashby / personio / smartrecruiters: token
+
+employers:
+  # --- Big Four assurance ---------------------------------------------------------------------
+  - name: EY
+    segment: big-four
+    ats: sfcareer
+    base: https://careers.ey.com/ey
+  - name: PwC
+    segment: big-four
+    ats: workday
+    tenant: pwc
+    wd: wd3
+    site: Global_Experienced_Careers
+  - name: KPMG
+    segment: big-four
+    ats: htmllist
+    listing: https://recruitingapp-2791.umantis.com/Jobs/All
+    link_pattern: /Vacancies/\d+/Description/
+    prefilter: true
+    default_country: CH
+    note: umantis board, no structured data on posting pages
+  - name: Deloitte
+    segment: big-four
+    ats: unknown
+    note: careers site renders jobs client-side; ATS not identified yet
+
+  # --- Insurers -------------------------------------------------------------------------------
+  - name: Zurich Insurance
+    segment: insurer
+    ats: sfcareer
+    base: https://www.careers.zurich.com
+    fetch_abroad: true
+  - name: Swiss Re
+    segment: insurer
+    ats: sfcareer
+    base: https://careers.swissre.com
+    fetch_abroad: true
+  - name: Helvetia Baloise
+    segment: insurer
+    ats: prospective
+    medium_id: 1002532
+    default_country: CH
+  - name: Vaudoise
+    segment: insurer
+    ats: unknown
+    note: advertises through jobs.ch / jobup.ch only (out of scope); use manual.yaml
+  - name: Groupe Mutuel
+    segment: insurer
+    ats: unknown
+    note: careers page not found at known URLs
+  - name: Mobiliar
+    segment: insurer
+    ats: unknown
+    note: careers page not found at known URLs
+
+  # --- Banks ----------------------------------------------------------------------------------
+  - name: UBS
+    segment: bank
+    ats: blocked
+    note: jobs.ubs.com answers 403 to non-browser clients
+  - name: Julius Baer
+    segment: bank
+    ats: workday
+    tenant: juliusbaer
+    wd: wd3
+    site: External
+    fetch_abroad: true
+  - name: PostFinance
+    segment: bank
+    ats: unknown
+    note: careers page not found at known URLs
+  - name: ZKB
+    segment: bank
+    ats: htmllist
+    listing: https://apply.refline.ch/792841/search.html
+    link_pattern: apply\.refline\.ch/792841/\d+/pub/
+    prefilter: true
+    default_country: CH
+  - name: BCV
+    segment: bank
+    ats: unknown
+    note: careers page not found at known URLs
+  - name: Pictet
+    segment: bank
+    ats: unknown
+    note: classic SuccessFactors portal (career012, company=banquepict) with no public feed
+  - name: Lombard Odier
+    segment: bank
+    ats: workday
+    tenant: lombardodier
+    wd: wd3
+    site: Lombard_Odier_Careers
+
+  # --- Regulators and public sector -------------------------------------------------------------
+  - name: FINMA
+    segment: regulator
+    ats: htmllist
+    listing: https://jobs.finma.ch/
+    link_pattern: jobs\.finma\.ch/offene-stellen/
+    default_country: CH
+  - name: SNB
+    segment: regulator
+    ats: unknown
+    note: careers page not found at known URLs
+  - name: Federal administration
+    segment: public-sector
+    ats: prospective
+    medium_id: 1000624
+    default_country: CH
+
+  # --- AI governance startups -----------------------------------------------------------------
+  - name: LatticeFlow
+    segment: ai-governance-startup
+    ats: unknown
+    note: open positions embedded in the site; no ATS feed found
+  - name: Calvin Risk
+    segment: ai-governance-startup
+    ats: unknown
+    note: open positions embedded in the site; no ATS feed found
+  - name: Modulos
+    segment: ai-governance-startup
+    ats: unknown
+    note: applications by email; no ATS feed found
+
+  # --- Evaluation teams -------------------------------------------------------------------------
+  - name: Thomson Reuters
+    segment: evaluation
+    ats: workday
+    tenant: thomsonreuters
+    wd: wd5
+    site: External_Career_Site
+  - name: Grid Dynamics
+    segment: evaluation
+    ats: unknown
+    note: custom careers site
+  - name: Artificialy
+    segment: evaluation
+    ats: unknown
+    note: no careers page found
+
+  # --- Research institutes ----------------------------------------------------------------------
+  - name: Idiap
+    segment: research
+    ats: htmllist
+    listing: https://careers.werecruit.io/en/idiap
+    link_pattern: /en/idiap/offers/
+    default_country: CH
+  - name: CSEM
+    segment: research
+    ats: htmllist
+    listing: https://www.csem.ch/en/jobs/
+    link_pattern: ^/en/jobs/\d+
+    default_country: CH
+  - name: ETH Zurich
+    segment: research
+    ats: htmllist
+    listing:
+      - https://apply.refline.ch/273855/search.html?lang=en
+      - https://apply.refline.ch/673276/search.html?lang=en
+      - https://apply.refline.ch/673277/search.html?lang=en
+    link_pattern: apply\.refline\.ch/\d+/\d+/pub/
+    prefilter: true
+    default_country: CH
+  - name: EPFL
+    segment: research
+    ats: sfcareer
+    base: https://careers.epfl.ch
+
+  # --- Pharma control ---------------------------------------------------------------------------
+  - name: Roche
+    segment: pharma
+    ats: workday
+    tenant: roche
+    wd: wd3
+    site: roche-ext
+    fetch_abroad: true
+  - name: Novartis
+    segment: pharma
+    ats: workday
+    tenant: novartis
+    wd: wd3
+    site: Novartis_Careers
+    fetch_abroad: true
+  - name: Nestlé Research
+    segment: pharma
+    ats: sfcareer
+    base: https://jobdetails.nestle.com
+  - name: Cytel
+    segment: pharma
+    ats: oracle
+    host: https://iblyjb.fa.ocs.oraclecloud.com
+    site: cytel
+    site_number: CX_1
+    fetch_abroad: true

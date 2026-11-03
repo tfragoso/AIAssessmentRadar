@@ -1,0 +1,361 @@
+{
+ "items": [
+  {
+   "SearchId": 1,
+   "Keyword": null,
+   "CorrectedKeyword": null,
+   "UseExactKeywordFlag": false,
+   "SuggestedKeyword": null,
+   "ExecuteSpellCheckFlag": true,
+   "Location": null,
+   "LocationId": null,
+   "Radius": 0,
+   "RadiusUnit": "MI",
+   "SelectedTitlesFacet": null,
+   "SelectedCategoriesFacet": null,
+   "SelectedPostingDatesFacet": null,
+   "SelectedLocationsFacet": null,
+   "LastSelectedFacet": null,
+   "Facets": "TITLES;LOCATIONS;LOCATION_LEVEL1;LOCATION_LEVEL2;LOCATION_LEVEL3;CATEGORIES;POSTING_DATES;WORK_LOCATIONS;FLEX_FIELDS;ORGANIZATIONS;WORKPLACE_TYPES",
+   "Offset": 0,
+   "Limit": 2,
+   "SortBy": "POSTING_DATES_DESC",
+   "TotalJobsCount": 1,
+   "Latitude": null,
+   "Longitude": null,
+   "SiteNumber": "CX_1",
+   "JobFamilyId": null,
+   "PostingStartDate": null,
+   "PostingEndDate": null,
+   "SelectedWorkLocationsFacet": null,
+   "RequisitionId": null,
+   "CandidateNumber": null,
+   "WorkLocationZipCode": null,
+   "WorkLocationCountryCode": null,
+   "SelectedFlexFieldsFacets": null,
+   "OrganizationId": null,
+   "SelectedOrganizationsFacet": null,
+   "UserTargetFacetName": null,
+   "UserTargetFacetInputTerm": null,
+   "HotJobFlag": null,
+   "WorkplaceType": null,
+   "SelectedWorkplaceTypesFacet": null,
+   "BotQRShortCode": null,
+   "requisitionList": [
+    {
+     "Id": "1471",
+     "Title": "Senior Director, Portfolio Leadership",
+     "PostedDate": "2026-11-03",
+     "PostingEndDate": null,
+     "Language": "US",
+     "PrimaryLocationCountry": "US",
+     "GeographyId": 300000000468633,
+     "HotJobFlag": false,
+     "WorkplaceTypeCode": null,
+     "JobFamily": null,
+     "JobFunction": null,
+     "WorkerType": null,
+     "ContractType": null,
+     "ManagerLevel": null,
+     "JobSchedule": null,
+     "JobShift": null,
+     "JobType": null,
+     "StudyLevel": null,
+     "DomesticTravelRequired": null,
+     "InternationalTravelRequired": null,
+     "WorkDurationYears": null,
+     "WorkDurationMonths": null,
+     "WorkHours": null,
+     "WorkDays": null,
+     "LegalEmployer": null,
+     "BusinessUnit": null,
+     "Department": null,
+     "Organization": null,
+     "BusinessUnitId": 300000005454386,
+     "LegalEmployerId": 300000005464001,
+     "OrganizationId": 1,
+     "MediaThumbURL": null,
+     "ShortDescriptionStr": "\n",
+     "PrimaryLocation": "United States",
+     "Distance": 1793664000000.0,
+     "TrendingFlag": false,
+     "BeFirstToApplyFlag": false,
+     "Relevancy": 9,
+     "WorkplaceType": "",
+     "ExternalQualificationsStr": null,
+     "ExternalResponsibilitiesStr": null,
+     "secondaryLocations": []
+    }
+   ],
+   "categoriesFacet": [
+    {
+     "Id": 300000005587713,
+     "Name": "Statistical Programming - FSP",
+     "TotalCount": 19
+    },
+    {
+     "Id": 300000005587784,
+     "Name": "Biostatistics - FSP",
+     "TotalCount": 10
+    },
+    {
+     "Id": 300000005587805,
+     "Name": "Clinical Data Insights & Analytics",
+     "TotalCount": 3
+    },
+    {
+     "Id": 300000005587533,
+     "Name": "Data Science",
+     "TotalCount": 1
+    },
+    {
+     "Id": 300000005587718,
+     "Name": "Portfolio Leadership",
+     "TotalCount": 1
+    },
+    {
+     "Id": 300000005587738,
+     "Name": "Real World Evidence",
+     "TotalCount": 1
+    },
+    {
+     "Id": 300000005587742,
+     "Name": "AOD Operations",
+     "TotalCount": 1
+    },
+    {
+     "Id": 300000005587790,
+     "Name": "EVA Health Economics",
+     "TotalCount": 1
+    },
+    {
+     "Id": 300000005587793,
+     "Name": "Information Security",
+     "TotalCount": 1
+    },
+    {
+     "Id": 300000005587850,
+     "Name": "PBS Project Management",
+     "TotalCount": 1
+    }
+   ],
+   "locationsFacet": [
+    {
+     "Id": 300000000468168,
+     "Name": "United Kingdom",
+     "TotalCount": 22
+    },
+    {
+     "Id": 300000000468252,
+     "Name": "India",
+     "TotalCount": 15
+    },
+    {
+     "Id": 300000000468141,
+     "Name": "Spain",
+     "TotalCount": 12
+    },
+    {
+     "Id": 300000000468633,
+     "Name": "United States",
+     "TotalCount": 11
+    },
+    {
+     "Id": 300000000468678,
+     "Name": "South Africa",
+     "TotalCount": 9
+    },
+    {
+     "Id": 300000000468474,
+     "Name": "Poland",
+     "TotalCount": 7
+    },
+    {
+     "Id": 300000000468051,
+     "Name": "Canada",
+     "TotalCount": 4
+    },
+    {
+     "Id": 300000000468084,
+     "Name": "Colombia",
+     "TotalCount": 4
+    },
+    {
+     "Id": 300000000468435,
+     "Name": "Netherlands",
+     "TotalCount": 4
+    },
+    {
+     "Id": 300000000468108,
+     "Name": "Germany",
+     "TotalCount": 2
+    }
+   ],
+   "postingDatesFacet": [
+    {
+     "Id": 7,
+     "Name": "Less than 7 days",
+     "TotalCount": 7
+    },
+    {
+     "Id": 30,
+     "Name": "Less than 30 days",
+     "TotalCount": 24
+    },
+    {
+     "Id": 31,
+     "Name": "Greater than 30 days",
+     "TotalCount": 18
+    }
+   ],
+   "titlesFacet": [
+    {
+     "Id": "Statistical Programming",
+     "Name": "Statistical Programming",
+     "TotalCount": 20
+    },
+    {
+     "Id": "Biostatistics - FSP",
+     "Name": "Biostatistics - FSP",
+     "TotalCount": 10
+    },
+    {
+     "Id": "Clinical Data Management",
+     "Name": "Clinical Data Management",
+     "TotalCount": 3
+    },
+    {
+     "Id": "Real World Analytics",
+     "Name": "Real World Analytics",
+     "TotalCount": 3
+    },
+    {
+     "Id": "Project Management",
+     "Name": "Project Management",
+     "TotalCount": 2
+    },
+    {
+     "Id": "Data Analysis",
+     "Name": "Data Analysis",
+     "TotalCount": 1
+    },
+    {
+     "Id": "General Management",
+     "Name": "General Management",
+     "TotalCount": 1
+    },
+    {
+     "Id": "Human Resources",
+     "Name": "Human Resources",
+     "TotalCount": 1
+    },
+    {
+     "Id": "IT / Technology Operations",
+     "Name": "IT / Technology Operations",
+     "TotalCount": 1
+    }
+   ],
+   "workLocationsFacet": [
+    {
+     "Id": 300000006095850,
+     "Name": "United Kingdom - Remote",
+     "TotalCount": 15
+    },
+    {
+     "Id": 300000006107409,
+     "Name": "India - Remote",
+     "TotalCount": 13
+    },
+    {
+     "Id": 300000029732232,
+     "Name": "South Africa - Remote",
+     "TotalCount": 10
+    },
+    {
+     "Id": 300000006095412,
+     "Name": "United States - Remote - Eastern Time",
+     "TotalCount": 9
+    },
+    {
+     "Id": 300000006110522,
+     "Name": "Spain - Remote",
+     "TotalCount": 8
+    },
+    {
+     "Id": 300000006105795,
+     "Name": "Colombia - Remote",
+     "TotalCount": 4
+    },
+    {
+     "Id": 300000006092510,
+     "Name": "Canada - Remote - Eastern Time",
+     "TotalCount": 2
+    },
+    {
+     "Id": 300000006110185,
+     "Name": "Romania - Remote",
+     "TotalCount": 2
+    },
+    {
+     "Id": 300000006082401,
+     "Name": "India - Pune",
+     "TotalCount": 1
+    },
+    {
+     "Id": 300000006084043,
+     "Name": "United Kingdom - London",
+     "TotalCount": 1
+    }
+   ],
+   "flexFieldsFacet": [],
+   "organizationsFacet": [
+    {
+     "Id": 1,
+     "Name": "Cytel Inc.",
+     "TotalCount": 42
+    }
+   ],
+   "workplaceTypesFacet": [
+    {
+     "Id": "ORA_REMOTE",
+     "Name": "Remote",
+     "TotalCount": 21
+    },
+    {
+     "Id": "ORA_ON_SITE",
+     "Name": "On-site",
+     "TotalCount": 18
+    },
+    {
+     "Id": "ORA_HYBRID",
+     "Name": "Hybrid",
+     "TotalCount": 3
+    }
+   ]
+  }
+ ],
+ "count": 1,
+ "hasMore": false,
+ "limit": 200,
+ "offset": 0,
+ "links": [
+  {
+   "rel": "self",
+   "href": "https://iblyjb.fa.ocs.oraclecloud.com:443/hcmRestApi/resources/11.13.18.05/recruitingCEJobRequisitions",
+   "name": "recruitingCEJobRequisitions",
+   "kind": "collection"
+  },
+  {
+   "rel": "action",
+   "href": "https://iblyjb.fa.ocs.oraclecloud.com:443/hcmRestApi/resources/11.13.18.05/recruitingCEJobRequisitions/action/getRequisitionsLocationCoordinates",
+   "name": "getRequisitionsLocationCoordinates",
+   "kind": "other"
+  },
+  {
+   "rel": "action",
+   "href": "https://iblyjb.fa.ocs.oraclecloud.com:443/hcmRestApi/resources/11.13.18.05/recruitingCEJobRequisitions/action/getRequisitionDetailsForMap",
+   "name": "getRequisitionDetailsForMap",
+   "kind": "other"
+  }
+ ]
+}
