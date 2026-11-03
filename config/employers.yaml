@@ -13,7 +13,8 @@
 #   workday:      tenant, wd (wd1/wd3/wd5...), site            -> {tenant}.{wd}.myworkdayjobs.com/{site}
 #   sfcareer:     base (SuccessFactors career site root, e.g. https://careers.ey.com/ey)
 #   prospective:  medium_id (from ohws.prospective.ch/public/v1/medium/{id})
-#   htmllist:     listing (url or list), link_pattern (regex on hrefs), prefilter (title match on link text)
+#   htmllist:     listing (url or list), link_pattern (regex on hrefs), prefilter (skip link texts no family
+#                 could match), page_param (e.g. "tc123=p{page}" for paged listings), max_pages
 #   oracle:       host, site (URL code), site_number
 #   greenhouse / lever / ashby / personio / smartrecruiters: token
 
@@ -31,12 +32,10 @@ employers:
     site: Global_Experienced_Careers
   - name: KPMG
     segment: big-four
-    ats: htmllist
-    listing: https://recruitingapp-2791.umantis.com/Jobs/All
-    link_pattern: /Vacancies/\d+/Description/
-    prefilter: true
+    ats: prospective
+    medium_id: 1693   # kpmg.prospective.ch (the old umantis board redirects here)
+    lang: en
     default_country: CH
-    note: umantis board, no structured data on posting pages
   - name: Deloitte
     segment: big-four
     ats: unknown
@@ -160,8 +159,8 @@ employers:
   - name: Idiap
     segment: research
     ats: htmllist
-    listing: https://careers.werecruit.io/en/idiap
-    link_pattern: /en/idiap/offers/
+    listing: https://www.idiap.ch/en/careers   # links to its werecruit.io offers
+    link_pattern: werecruit\.io/en/idiap/offers/
     default_country: CH
   - name: CSEM
     segment: research
@@ -172,11 +171,8 @@ employers:
   - name: ETH Zurich
     segment: research
     ats: htmllist
-    listing:
-      - https://apply.refline.ch/273855/search.html?lang=en
-      - https://apply.refline.ch/673276/search.html?lang=en
-      - https://apply.refline.ch/673277/search.html?lang=en
-    link_pattern: apply\.refline\.ch/\d+/\d+/pub/
+    listing: https://jobs.ethz.ch/
+    link_pattern: ^/job/view/
     prefilter: true
     default_country: CH
   - name: EPFL

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import logging
 import re
-from urllib.parse import urljoin
+from urllib.parse import unquote, urljoin
 
 from selectolax.lexbor import LexborHTMLParser as HTMLParser
 
@@ -84,6 +84,9 @@ def sfcareer(emp: dict, ctx: Context) -> list[RawPosting]:
             log.warning("sfcareer %s: detail failed for %s: %s", base, url, e)
             continue
         raw = _raw_from_detail(m.group(1) if m else url, url, d, title, loc)
+        if not raw.location_raw:  # URLs read /job/{City}-{Title}/{id}/
+            slug = re.search(r"/job/([^/-]+)-", url)
+            raw.location_raw = unquote(slug.group(1)) if slug else ""
         if url in swiss_urls and not raw.country:
             raw.country = "CH"
         out.append(raw)
@@ -98,16 +101,27 @@ def htmllist(emp: dict, ctx: Context) -> list[RawPosting]:
     pattern = re.compile(emp["link_pattern"])
     links: dict[str, str] = {}
     for listing in listings:
-        tree = HTMLParser(ctx.client.get_text(listing))
-        for a in tree.css("a[href]"):
-            href = a.attributes.get("href") or ""
-            if pattern.search(href):
-                url = urljoin(listing, href).split("#")[0]
-                links.setdefault(url, a.text(separator=" ").strip())
+        # optional paging, e.g. page_param: "tc1152481=p{page}" -> listing?tc1152481=p2, p3, ...
+        pages = [listing] + [
+            listing + ("&" if "?" in listing else "?") + emp["page_param"].format(page=n)
+            for n in range(2, emp.get("max_pages", 30) + 1)
+        ] if emp.get("page_param") else [listing]
+        for page_url in pages:
+            tree = HTMLParser(ctx.client.get_text(page_url))
+            new = 0
+            for a in tree.css("a[href]"):
+                href = a.attributes.get("href") or ""
+                if pattern.search(href):
+                    url = urljoin(listing, href).split("#")[0]
+                    if url not in links:
+                        new += 1
+                        links[url] = a.text(separator=" ").strip() or a.attributes.get("aria-label") or ""
+            if not new:
+                break
 
     out = []
     for url, text in links.items():
-        if emp.get("prefilter") and text and not ctx.title_match(text):
+        if emp.get("prefilter") and text and not ctx.maybe_match(text):
             continue
         try:
             d = _detail(ctx, url)

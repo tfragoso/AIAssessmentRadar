@@ -5,6 +5,7 @@ from __future__ import annotations
 import csv
 import logging
 import shutil
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict
 from datetime import date
 from pathlib import Path
@@ -41,24 +42,35 @@ def fetch_all(cfg: Config, client: Client, only: str | None = None):
     kept: dict[str, Posting] = {}
     statuses: list[SourceStatus] = []
     uncovered: list[dict] = []
+    jobs = []
     for emp in cfg.employers:
         if only and only.lower() not in emp["name"].lower():
             continue
-        ats = emp.get("ats", "unknown")
-        if ats in UNCOVERED_ATS:
+        if emp.get("ats", "unknown") in UNCOVERED_ATS:
             uncovered.append(emp)
-            continue
-        adapter = REGISTRY.get(ats)
+        else:
+            jobs.append(emp)
+
+    def fetch_one(emp: dict):
+        ats = emp["ats"]
         st = SourceStatus(source=source_name(emp), employer=emp["name"], ats=ats, ok=False)
-        statuses.append(st)
+        adapter = REGISTRY.get(ats)
         if adapter is None:
             st.error = f"no adapter '{ats}'"
-            log.warning("%s: %s", st.source, st.error)
-            continue
+            return emp, st, []
         try:
-            raws = adapter(emp, ctx)
+            return emp, st, adapter(emp, ctx)
         except Exception as e:  # a broken source must not stop the run
             st.error = f"{type(e).__name__}: {e}"[:300]
+            return emp, st, []
+
+    # Sources run in parallel; the client still throttles each host to one request per second.
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        results = list(pool.map(fetch_one, jobs))
+
+    for emp, st, raws in results:  # in config order, so outputs are deterministic
+        statuses.append(st)
+        if st.error:
             log.warning("%s failed: %s", st.source, st.error)
             continue
         st.ok, st.fetched = True, len(raws)
@@ -72,7 +84,7 @@ def fetch_all(cfg: Config, client: Client, only: str | None = None):
             if p.posting_id not in kept:
                 kept[p.posting_id] = p
                 st.kept += 1
-        log.info("%-28s %-15s fetched %4d kept %3d", st.source, ats, st.fetched, st.kept)
+        log.info("%-28s %-15s fetched %4d kept %3d", st.source, st.ats, st.fetched, st.kept)
     return list(kept.values()), statuses, uncovered
 
 

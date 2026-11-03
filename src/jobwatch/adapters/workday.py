@@ -15,8 +15,11 @@ from .base import Context, html_to_text, iso_date, register
 log = logging.getLogger(__name__)
 
 PAGE = 20
-MAX_PAGES_PER_TERM = 10  # 200 hits per search term is plenty
+MAX_PAGES_PER_TERM = 5  # results are relevance-ranked; 100 hits per term is plenty
 SWITZERLAND_ID = "187134fccb084a0ea9b4b95f23890dbe"  # Workday's global country id
+# Boards without a country facet: find Swiss postings by searching for Swiss places.
+SWISS_PLACE_SEARCHES = ["Switzerland", "Zurich", "Zürich", "Basel", "Bern", "Geneva", "Genève", "Lausanne", "Zug",
+                        "Lugano", "Kaiseraugst", "Schweiz", "Suisse"]
 
 
 def _find_swiss_facet(facets: list) -> tuple[str, str] | None:
@@ -66,6 +69,12 @@ def workday(emp: dict, ctx: Context) -> list[RawPosting]:
         for data in search("", {param: [fid]}, max_pages=50):
             for j in data.get("jobPostings", []):
                 hits[j["externalPath"]] = (j, True)
+    else:
+        for place in emp.get("swiss_searches", SWISS_PLACE_SEARCHES):
+            for data in search(place, {}, max_pages=50):
+                for j in data.get("jobPostings", []):
+                    if ctx.is_swiss(j.get("locationsText", "")) and j["externalPath"] not in hits:
+                        hits[j["externalPath"]] = (j, True)
     if not swiss_facet or emp.get("fetch_abroad"):
         for term in ctx.search_terms:
             for data in search(term, {}, MAX_PAGES_PER_TERM):

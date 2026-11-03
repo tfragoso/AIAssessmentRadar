@@ -21,7 +21,8 @@ families:
             validation de modeles d ia, validation des modeles d ia]
     description: [ai governance, eu ai act, responsible ai, trustworthy ai, ai assurance, validation of ai models,
                   ai model validation, ai risk management, ki governance, gouvernance de l ia, gouvernance ia]
-    title_context: [governance, validation, assurance, audit, model, ai, ki, ia, ml, machine learning]
+    title_context: [governance, validation, assurance, audit, risk, risiko, risque, trust, ethics,
+                    ethik, regulatory, regulation, controls, model, modell, modele]
     exclude: []
 
   model_risk:
@@ -40,8 +41,8 @@ families:
     title: [llm evaluation, ai evaluation, model evaluation, evals, evaluation engineer, evaluation scientist,
             benchmark, red teaming, ai red team, llm red team, ai safety]
     description: [llm evaluation, evaluation of llms, evaluating llms, evals, red teaming, ai safety,
-                  llm benchmarking, model evaluation]
-    title_context: [ai, ml, machine learning, llm, genai, research, engineer, scientist, data]
+                  llm benchmarking, evaluation frameworks for llm, evaluation frameworks for ai]
+    title_context: [ai, llm, genai, generative, machine learning, ml, nlp, evaluation, quality, research]
     exclude: [penetration, offensive security, cyber, index, benchmark administrator, compensation, pricing]
 
   pharma_control:

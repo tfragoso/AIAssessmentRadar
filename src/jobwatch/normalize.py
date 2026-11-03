@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import html
 import re
 
 from .models import Posting, RawPosting
@@ -76,7 +77,7 @@ def to_posting(raw: RawPosting, emp: dict, tagger: RegionTagger) -> Posting:
         employer=emp["name"],
         segment=emp.get("segment", ""),
         ats=emp["ats"],
-        title=re.sub(r"\s+", " ", raw.title).strip(),
+        title=re.sub(r"\s+", " ", html.unescape(raw.title)).strip(),
         url=raw.url,
         location_raw=raw.location_raw,
         country=country,

@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import threading
 import time
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -34,6 +35,8 @@ class Client:
         self.retries = retries
         self._last: dict[str, float] = {}
         self._robots: dict[str, RobotFileParser | None] = {}
+        self._locks: dict[str, threading.Lock] = {}
+        self._guard = threading.Lock()  # sources run in parallel threads; hosts are throttled one at a time
         self._http = httpx.Client(
             headers={"User-Agent": USER_AGENT, "Accept-Language": "en,de;q=0.8,fr;q=0.7"},
             timeout=30.0,
@@ -97,10 +100,13 @@ class Client:
 
     def _throttle(self, url: str) -> None:
         host = urlsplit(url).netloc
-        wait = self._last.get(host, 0) + MIN_INTERVAL - time.monotonic()
-        if wait > 0:
-            time.sleep(wait)
-        self._last[host] = time.monotonic()
+        with self._guard:
+            lock = self._locks.setdefault(host, threading.Lock())
+        with lock:
+            wait = self._last.get(host, 0) + MIN_INTERVAL - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+            self._last[host] = time.monotonic()
 
     def allowed(self, url: str) -> bool:
         parts = urlsplit(url)
