@@ -56,7 +56,8 @@ def test_default_country():
         ("Red Team Operator (Penetration Testing)", "", ["Zurich"], None),
         ("Benchmark Administrator - Index", "", ["Zurich"], None),
         ("Senior Biostatistician", "", ["Basel"], "pharma_control"),
-        ("Data Scientist", "", ["Zurich"], None),  # data science only counts in Bern / Romandie
+        ("Data Scientist", "", ["Zurich"], "data_science"),
+        ("Data Scientist", "", ["Other CH"], None),  # data science: Bern, Romandie, Zurich, Basel only
         ("Data Scientist", "", ["Romandie"], "data_science"),
         ("Statistiker/in", "", ["Bern"], "data_science"),
         ("Coach", "", ["Basel"], None),  # "coa" must not match inside "coach"

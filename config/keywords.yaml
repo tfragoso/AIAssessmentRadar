@@ -56,8 +56,8 @@ families:
     exclude: [certificate of analysis]
 
   data_science:
-    label: Data science core (Bern and Romandie)
-    regions: [Bern, Romandie]
+    label: Data science core (Bern, Romandie, Zurich, Basel)
+    regions: [Bern, Romandie, Zurich, Basel]
     title: [data scientist, data science, statistician, machine learning engineer, ml engineer,
             machine learning scientist, applied scientist, statistiker, statistikerin, datenwissenschaftler,
             scientifique des donnees, data scientiste, statisticien, statisticienne, ingenieur machine learning]

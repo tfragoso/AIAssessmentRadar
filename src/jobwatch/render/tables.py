@@ -9,7 +9,7 @@ from pathlib import Path
 from ..models import FAMILIES, Posting
 
 CSV_COLUMNS = ["family", "company", "segment", "role", "url", "region", "location", "languages", "seniority",
-               "years", "contract", "workload", "remote", "salary_chf", "posted", "first_seen", "offshore",
+               "years", "contract", "workload", "remote", "salary_chf", "skills", "posted", "first_seen", "offshore",
                "posting_id"]
 
 
@@ -45,7 +45,7 @@ def _row(p: Posting) -> dict:
         "family": p.role_family, "company": p.employer, "segment": p.segment, "role": p.title, "url": p.url,
         "region": p.region, "location": p.location_raw, "languages": fmt_languages(p.languages_required),
         "seniority": p.seniority, "years": p.years_required, "contract": p.contract_type, "workload": p.workload,
-        "remote": p.remote, "salary_chf": sal, "posted": p.posted_date, "first_seen": p.first_seen,
+        "remote": p.remote, "salary_chf": sal, "skills": p.key_skills, "posted": p.posted_date, "first_seen": p.first_seen,
         "offshore": "yes" if p.offshore_match else "", "posting_id": p.posting_id,
     }
 
@@ -72,6 +72,7 @@ def render_readme(
     closed: list[Posting],
     statuses: list[SourceStatus],
     uncovered: list[dict],
+    llm_summary: str = "",
 ) -> str:
     rows = open_swiss(history)
     new_ch = [p for p in new if p.region != "Abroad"]
@@ -82,7 +83,7 @@ def render_readme(
     L = [
         "# Swiss AI Validation Jobs Monitor",
         "",
-        "Open Swiss roles in AI validation, model risk and AI evaluation, plus data science (Bern and Romandie)"
+        "Open Swiss roles in AI validation, model risk and AI evaluation, plus data science (Bern, Romandie, Zurich, Basel)"
         " and a pharma control group. Rebuilt every Monday from employers' own job boards.",
         "",
         f"**Last update:** {run_date}",
@@ -92,6 +93,8 @@ def render_readme(
         f"| {len(rows)} | {len(new_ch)} | {len(closed_ch)} | {len(statuses) - len(failed)} | {len(failed)} |",
         "",
     ]
+    if llm_summary:
+        L += [f"_{_md(llm_summary)}_", ""]
     if failed:
         L += ["**Failed sources this week:** " + ", ".join(f"{s.source} ({_md(s.error)[:80]})" for s in failed), ""]
 
@@ -124,7 +127,7 @@ def render_readme(
         "## Sources",
         "",
         "Languages: `(FR)` = a plus, not required. Years = minimum years of experience asked."
-        " Blank cells mean the rules could not tell.",
+        " Blank cells mean neither the rules nor the LLM pass could tell. Skills are in the CSVs.",
         "",
         "| Source | ATS | Status | Postings fetched | Kept |",
         "|---|---|---|---:|---:|",
@@ -147,7 +150,9 @@ def render_readme(
         " related; see [`config/keywords.yaml`](config/keywords.yaml). Employers are listed in"
         " [`config/employers.yaml`](config/employers.yaml); hand-added roles go in"
         " [`config/manual.yaml`](config/manual.yaml).",
-        "- Seniority, years, languages, contract type and workload come from deterministic rules on the ad text.",
+        "- Seniority, years, languages, contract type and workload come from deterministic rules on the ad text;"
+        " an LLM pass ([`config/llm.yaml`](config/llm.yaml)) fills what the rules leave empty and maps key skills"
+        " onto a fixed list. Each ad is sent once (cached by text hash in `data/llm_cache.jsonl`).",
         "- A role is marked closed after it is missing from two successful weekly runs; closed roles stay in the"
         " history.",
         "",

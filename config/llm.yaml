@@ -1,0 +1,60 @@
+# LLM pass: fills the fields the rules leave empty, and key_skills. Runs once per ad (cached by desc_hash in
+# data/llm_cache.jsonl). Without the API key in the environment, the pipeline runs on rules alone.
+provider: gemini              # only gemini is implemented for now
+model: gemini-3.8-flash       # cheaper alternative: gemini-3.5-flash-lite
+api_key_env: GEMINI_API_KEY
+monthly_cap: 400              # max API calls per calendar month
+max_chars: 12000              # ad text sent per call
+swiss_only: true              # don't spend calls on abroad postings (kept only for the offshore flag)
+
+# key_skills are mapped onto this fixed list so month-on-month counts are comparable.
+skills_vocabulary:
+  - Python
+  - R
+  - SQL
+  - SAS
+  - Spark
+  - PyTorch
+  - TensorFlow
+  - scikit-learn
+  - cloud (AWS/Azure/GCP)
+  - MLOps
+  - LLM
+  - generative AI
+  - agents
+  - RAG
+  - NLP
+  - computer vision
+  - deep learning
+  - Bayesian statistics
+  - causal inference
+  - time series
+  - survival analysis
+  - experimental design
+  - optimisation
+  - explainability
+  - fairness and bias
+  - model validation
+  - model risk management
+  - model monitoring
+  - SR 11-7
+  - FINMA
+  - EU AI Act
+  - ISO 42001
+  - NIST AI RMF
+  - AI governance
+  - data governance
+  - red teaming
+  - LLM evaluation
+  - benchmarking
+  - credit risk
+  - market risk
+  - IFRS 9
+  - Basel III/IV
+  - actuarial
+  - pricing
+  - clinical trials
+  - CDISC
+  - HEOR
+  - psychometrics
+  - real-world evidence

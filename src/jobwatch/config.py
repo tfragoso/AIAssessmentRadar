@@ -14,6 +14,7 @@ class Config:
     employers: list[dict]
     keywords: dict
     regions: dict
+    llm: dict
 
     @property
     def families(self) -> dict:
@@ -35,4 +36,5 @@ def load(root: Path) -> Config:
         base = known.get(name, {"name": name, "segment": "other"})
         employers.append({**base, "ats": "manual", "postings": posts, "source": f"{name} (manual)"})
 
-    return Config(root=root, employers=employers, keywords=read("keywords.yaml"), regions=read("regions.yaml"))
+    llm = read("llm.yaml") if (cfg / "llm.yaml").exists() else {}
+    return Config(root=root, employers=employers, keywords=read("keywords.yaml"), regions=read("regions.yaml"), llm=llm)

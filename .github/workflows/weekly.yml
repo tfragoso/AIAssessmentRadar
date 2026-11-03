@@ -28,6 +28,8 @@ jobs:
         run: uv run pytest -q
 
       - name: Fetch and render
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: uv run jobwatch run
 
       - name: Commit outputs

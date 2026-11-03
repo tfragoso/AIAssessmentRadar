@@ -1,14 +1,14 @@
 # Swiss AI Validation Jobs Monitor
 
-Open Swiss roles in AI validation, model risk and AI evaluation, plus data science (Bern and Romandie) and a pharma control group. Rebuilt every Monday from employers' own job boards.
+Open Swiss roles in AI validation, model risk and AI evaluation, plus data science (Bern, Romandie, Zurich, Basel) and a pharma control group. Rebuilt every Monday from employers' own job boards.
 
 **Last update:** 2026-11-03
 
 | Open roles | New this week | Closed this week | Sources OK | Sources failed |
 |---:|---:|---:|---:|---:|
-| 10 | 0 | 0 | 19 | 1 |
+| 16 | 0 | 0 | 20 | 0 |
 
-**Failed sources this week:** Novartis (HTTPStatusError: Server error '520 <none>' for url 'https://novartis.wd3.myworkd)
+_LLM pass off: HTTP 402: Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.d_
 
 ## Contents
 
@@ -16,7 +16,7 @@ Open Swiss roles in AI validation, model risk and AI evaluation, plus data scien
 - [Model risk](#model-risk) (2)
 - [AI evaluation](#ai-evaluation) (1)
 - [Pharma control group](#pharma-control) (1)
-- [Data science core (Bern and Romandie)](#data-science) (2)
+- [Data science core (Bern, Romandie, Zurich, Basel)](#data-science) (8)
 - [Sources](#sources)
 
 <a id="ai-validation"></a>
@@ -52,16 +52,22 @@ Open Swiss roles in AI validation, model risk and AI evaluation, plus data scien
 | Nestlé Research | [Specialist Biostatistician](https://jobdetails.nestle.com/job/Lausanne-Specialist-Biostatistician/1438056933/) | Romandie | EN C1 |  |  | permanent | 2026-11-03 |  |
 
 <a id="data-science"></a>
-## Data science core (Bern and Romandie)
+## Data science core (Bern, Romandie, Zurich, Basel)
 
 | Company | Role | Region | Languages | Seniority | Years | Contract | Posted | Offshore |
 |---|---|---|---|---|---:|---|---|---|
+| Julius Baer | [Data Scientist 100% (f/m/d)](https://juliusbaer.wd3.myworkdayjobs.com/External/job/Zurich/Data-Scientist-100---f-m-d-_r-17167-2) | Zurich | EN C1 | senior | 5 |  | 2026-10-23 |  |
 | Lombard Odier | [Internship – Machine Learning Engineer - Action Dashboard Ranking Engine](https://lombardodier.wd3.myworkdayjobs.com/Lombard_Odier_Careers/job/Geneva/Internship---Machine-Learning-Engineer---Action-Dashboard-Ranking-Engine_R0007629) | Romandie |  | intern |  |  | 2026-10-19 |  |
 | Nestlé Research | [R&D Data Science Intern](https://jobdetails.nestle.com/job/Orbe-R&D-Data-Science-Intern/1445507833/) | Romandie | (FR), EN C1 | intern |  | fixed-term | 2026-11-03 |  |
+| Novartis | [Scientific AI Platform Lead, Data Science, Disease Area X](https://novartis.wd3.myworkdayjobs.com/Novartis_Careers/job/Basel-City/Scientific-AI-Platform-Lead--Data-Science--Disease-Area-X_REQ-10089231) | Basel |  | lead | 5 |  | 2026-10-30 |  |
+| Novartis | [WORKFORCE STRATEGY HEAD, ENTERPRISE DATA SCIENCE & ARTIFICIAL INTELLIGENCE (DSAI)](https://novartis.wd3.myworkdayjobs.com/Novartis_Careers/job/Basel-City/WORKFORCE-STRATEGY-HEAD--ENTERPRISE-DATA-SCIENCE---ARTIFICIAL-INTELLIGENCE--DSAI-_REQ-10089300-2) | Basel |  | director |  |  | 2026-10-26 |  |
+| Roche | [Data Scientist / Engineer - DNA-Encoded Library Technology (DELT)](https://roche.wd3.myworkdayjobs.com/roche-ext/job/Basel/Data-Scientist---Engineer---DNA-Encoded-Library-Technology--DELT-_202610-125078-1) | Basel |  |  |  |  | 2026-10-29 |  |
+| Roche | [Machine Learning Scientist - Quantum Chemistry](https://roche.wd3.myworkdayjobs.com/roche-ext/job/Welwyn/Machine-Learning-Scientist---Quantum-Chemistry_202606-115524-1) | Basel |  |  |  |  | 2026-06-23 |  |
+| Zurich Insurance | [AI and Data Science Manager - Group Audit 80-100%, temporary for 12 months](https://www.careers.zurich.com/job/Z%C3%BCrich-AI-and-Data-Science-Manager-Group-Audit-80-100%2C-temporary-for-12-months/1375495457/) | Zurich | EN C1 | lead | 2 | temporary-agency | 2026-11-03 |  |
 
 ## Sources
 
-Languages: `(FR)` = a plus, not required. Years = minimum years of experience asked. Blank cells mean the rules could not tell.
+Languages: `(FR)` = a plus, not required. Years = minimum years of experience asked. Blank cells mean neither the rules nor the LLM pass could tell. Skills are in the CSVs.
 
 | Source | ATS | Status | Postings fetched | Kept |
 |---|---|---|---:|---:|
@@ -74,17 +80,17 @@ Languages: `(FR)` = a plus, not required. Years = minimum years of experience as
 | FINMA | htmllist | ok | 6 | 0 |
 | Helvetia Baloise | prospective | ok | 172 | 1 |
 | Idiap | htmllist | ok | 3 | 0 |
-| Julius Baer | workday | ok | 12 | 3 |
+| Julius Baer | workday | ok | 12 | 4 |
 | KPMG | prospective | ok | 73 | 1 |
 | Lombard Odier | workday | ok | 18 | 1 |
 | Nestlé Research | sfcareer | ok | 10 | 2 |
-| Novartis | workday | failed | 0 | 0 |
+| Novartis | workday | ok | 30 | 21 |
 | PwC | workday | ok | 26 | 0 |
-| Roche | workday | ok | 49 | 21 |
+| Roche | workday | ok | 49 | 23 |
 | Swiss Re | sfcareer | ok | 2 | 2 |
 | Thomson Reuters | workday | ok | 7 | 1 |
 | ZKB | htmllist | ok | 4 | 0 |
-| Zurich Insurance | sfcareer | ok | 18 | 13 |
+| Zurich Insurance | sfcareer | ok | 18 | 14 |
 | Artificialy | unknown | not covered: no careers page found | | |
 | BCV | unknown | not covered: careers page not found at known URLs | | |
 | Calvin Risk | unknown | not covered: open positions embedded in the site; no ATS feed found | | |
@@ -106,5 +112,5 @@ Data: [`csv/`](csv/) (open roles), [`data/postings.csv`](data/postings.csv) (ful
 
 - Postings come only from employers' own applicant-tracking systems (Workday, SuccessFactors, Prospective, Oracle, career pages with schema.org data), never from LinkedIn or Indeed. robots.txt is respected and each host gets at most one request per second.
 - Role families are keyword matches (EN/DE/FR) on the title, or on the description when the title is related; see [`config/keywords.yaml`](config/keywords.yaml). Employers are listed in [`config/employers.yaml`](config/employers.yaml); hand-added roles go in [`config/manual.yaml`](config/manual.yaml).
-- Seniority, years, languages, contract type and workload come from deterministic rules on the ad text.
+- Seniority, years, languages, contract type and workload come from deterministic rules on the ad text; an LLM pass ([`config/llm.yaml`](config/llm.yaml)) fills what the rules leave empty and maps key skills onto a fixed list. Each ad is sent once (cached by text hash in `data/llm_cache.jsonl`).
 - A role is marked closed after it is missing from two successful weekly runs; closed roles stay in the history.

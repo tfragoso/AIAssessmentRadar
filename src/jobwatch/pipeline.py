@@ -14,6 +14,7 @@ from . import history
 from .adapters import REGISTRY, Context
 from .config import Config
 from .enrich import rules
+from .enrich.llm import LLMEnricher
 from .filter import FamilyMatcher, apply
 from .http import Client
 from .models import Posting
@@ -125,6 +126,12 @@ def run(cfg: Config, out: Path, run_date: str | None = None, only: str | None = 
 
     data = out / "data"
     data.mkdir(parents=True, exist_ok=True)
+
+    llm = LLMEnricher(cfg.llm, data / "llm_cache.jsonl", run_date)
+    for p in current:
+        llm.enrich(p)
+    llm.save()
+    log.info("%s", llm.stats.summary())
     status_csv = data / "source_status.csv"
     prev = _previous_run(status_csv)
     hist = history.load(data / "postings.csv")
@@ -137,7 +144,7 @@ def run(cfg: Config, out: Path, run_date: str | None = None, only: str | None = 
     _write_status(status_csv, run_date, statuses)
     write_csvs(out / "csv", hist)
     (out / "README.md").write_text(
-        render_readme(hist, cfg.families, run_date, new, closed, statuses, uncovered), encoding="utf-8"
+        render_readme(hist, cfg.families, run_date, new, closed, statuses, uncovered, llm.stats.summary()), encoding="utf-8"
     )
 
     n_ok = sum(s.ok for s in statuses)
