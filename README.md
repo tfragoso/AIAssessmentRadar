@@ -6,7 +6,9 @@ Open Swiss roles in AI validation, model risk and AI evaluation, plus data scien
 
 | Open roles | New this week | Closed this week | Sources OK | Sources failed |
 |---:|---:|---:|---:|---:|
-| 10 | 10 | 0 | 20 | 0 |
+| 10 | 0 | 0 | 19 | 1 |
+
+**Failed sources this week:** Novartis (HTTPStatusError: Server error '520 <none>' for url 'https://novartis.wd3.myworkd)
 
 ## Contents
 
@@ -22,40 +24,40 @@ Open Swiss roles in AI validation, model risk and AI evaluation, plus data scien
 
 | Company | Role | Region | Languages | Seniority | Years | Contract | Posted | Offshore |
 |---|---|---|---|---|---:|---|---|---|
-| EPFL | [PhD Student in Trustworthy AI for Autonomous Plant Operations](https://careers.epfl.ch/job/Lausanne-PhD-Student-in-Trustworthy-AI-for-Autonomous-Plant-Operations/1165540855/) 🆕 | Romandie | EN | junior |  | fixed-term | 2026-11-03 |  |
-| EY | [Quant & Analytics Consultant - Financial Services Risk Consulting](https://careers.ey.com/ey/job/Zurich-Quant-&-Analytics-Consultant-Financial-Services-Risk-Consulting-8005/1080228001/) 🆕 | Zurich | DE C1, (FR), EN C1 | junior | 1 |  | 2026-11-03 |  |
-| Helvetia Baloise | [Head of Data Governance (w/m/d) Teilzeit/Vollzeit](https://jobs.helvetia.com/offene-stellen/head-of-data-governance-w-m-d-teilzeit-vollzeit/2b36cb91-ced6-4100-b392-2a2c5054b20d) 🆕 | Basel | DE C1, (FR), EN C1 | director |  |  | 2026-09-29 |  |
-| Swiss Re | [Senior Digital & Technology Risk Manager (Hybrid; m/f/x/d; 80-100%)](https://careers.swissre.com/job/Zurich-Senior-Digital-&-Technology-Risk-Manager-%28Hybrid-mfxd-80-100%29-Zuri/1448562033/) 🆕 | Zurich | EN C1 | lead | 7 |  | 2026-11-03 |  |
+| EPFL | [PhD Student in Trustworthy AI for Autonomous Plant Operations](https://careers.epfl.ch/job/Lausanne-PhD-Student-in-Trustworthy-AI-for-Autonomous-Plant-Operations/1165540855/) | Romandie | EN | junior |  | fixed-term | 2026-11-03 |  |
+| EY | [Quant & Analytics Consultant - Financial Services Risk Consulting](https://careers.ey.com/ey/job/Zurich-Quant-&-Analytics-Consultant-Financial-Services-Risk-Consulting-8005/1080228001/) | Zurich | DE C1, (FR), EN C1 | junior | 1 |  | 2026-11-03 |  |
+| Helvetia Baloise | [Head of Data Governance (w/m/d) Teilzeit/Vollzeit](https://jobs.helvetia.com/offene-stellen/head-of-data-governance-w-m-d-teilzeit-vollzeit/2b36cb91-ced6-4100-b392-2a2c5054b20d) | Basel | DE C1, (FR), EN C1 | director |  |  | 2026-09-29 |  |
+| Swiss Re | [Senior Digital & Technology Risk Manager (Hybrid; m/f/x/d; 80-100%)](https://careers.swissre.com/job/Zurich-Senior-Digital-&-Technology-Risk-Manager-%28Hybrid-mfxd-80-100%29-Zuri/1448562033/) | Zurich | EN C1 | lead | 7 |  | 2026-11-03 |  |
 
 <a id="model-risk"></a>
 ## Model risk
 
 | Company | Role | Region | Languages | Seniority | Years | Contract | Posted | Offshore |
 |---|---|---|---|---|---:|---|---|---|
-| EY | [Manager / Senior Consultant - Financial Risk Management mit Fokus Kreditrisiko-Modellierung](https://careers.ey.com/ey/job/Zurich-Manager-Senior-Consultant-Financial-Risk-Management-mit-Fokus-Kreditrisiko-Modellierung-8005/1288036301/) 🆕 | Zurich | DE, EN | lead | 3 |  | 2026-11-03 |  |
-| KPMG | [(Senior) Consultant - FS Consulting - Quantitative Risk & AI](https://jobs-ch.kpmg.com/job-vacancies/senior-consultant-fs-consulting-quantitative-risk-ai/eaad554a-1b53-4b10-94a7-6046a6200788) 🆕 | Zurich | DE C1, (FR), EN C1 | senior |  | permanent | 2026-10-30 |  |
+| EY | [Manager / Senior Consultant - Financial Risk Management mit Fokus Kreditrisiko-Modellierung](https://careers.ey.com/ey/job/Zurich-Manager-Senior-Consultant-Financial-Risk-Management-mit-Fokus-Kreditrisiko-Modellierung-8005/1288036301/) | Zurich | DE, EN | lead | 3 |  | 2026-11-03 |  |
+| KPMG | [(Senior) Consultant - FS Consulting - Quantitative Risk & AI](https://jobs-ch.kpmg.com/job-vacancies/senior-consultant-fs-consulting-quantitative-risk-ai/eaad554a-1b53-4b10-94a7-6046a6200788) | Zurich | DE C1, (FR), EN C1 | senior |  | permanent | 2026-10-30 |  |
 
 <a id="ai-evaluation"></a>
 ## AI evaluation
 
 | Company | Role | Region | Languages | Seniority | Years | Contract | Posted | Offshore |
 |---|---|---|---|---|---:|---|---|---|
-| Thomson Reuters | [Lead Software Engineer, AI](https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site/job/Switzerland-Zug-Zug/Lead-Software-Engineer--AI_JREQ202548) 🆕 | Other CH |  | lead |  |  | 2026-10-19 |  |
+| Thomson Reuters | [Lead Software Engineer, AI](https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site/job/Switzerland-Zug-Zug/Lead-Software-Engineer--AI_JREQ202548) | Other CH |  | lead |  |  | 2026-10-19 |  |
 
 <a id="pharma-control"></a>
 ## Pharma control group
 
 | Company | Role | Region | Languages | Seniority | Years | Contract | Posted | Offshore |
 |---|---|---|---|---|---:|---|---|---|
-| Nestlé Research | [Specialist Biostatistician](https://jobdetails.nestle.com/job/Lausanne-Specialist-Biostatistician/1438056933/) 🆕 | Romandie | EN C1 |  |  | permanent | 2026-11-03 |  |
+| Nestlé Research | [Specialist Biostatistician](https://jobdetails.nestle.com/job/Lausanne-Specialist-Biostatistician/1438056933/) | Romandie | EN C1 |  |  | permanent | 2026-11-03 |  |
 
 <a id="data-science"></a>
 ## Data science core (Bern and Romandie)
 
 | Company | Role | Region | Languages | Seniority | Years | Contract | Posted | Offshore |
 |---|---|---|---|---|---:|---|---|---|
-| Lombard Odier | [Internship – Machine Learning Engineer - Action Dashboard Ranking Engine](https://lombardodier.wd3.myworkdayjobs.com/Lombard_Odier_Careers/job/Geneva/Internship---Machine-Learning-Engineer---Action-Dashboard-Ranking-Engine_R0007629) 🆕 | Romandie |  | intern |  |  | 2026-10-19 |  |
-| Nestlé Research | [R&D Data Science Intern](https://jobdetails.nestle.com/job/Orbe-R&D-Data-Science-Intern/1445507833/) 🆕 | Romandie | (FR), EN C1 | intern |  | fixed-term | 2026-11-03 |  |
+| Lombard Odier | [Internship – Machine Learning Engineer - Action Dashboard Ranking Engine](https://lombardodier.wd3.myworkdayjobs.com/Lombard_Odier_Careers/job/Geneva/Internship---Machine-Learning-Engineer---Action-Dashboard-Ranking-Engine_R0007629) | Romandie |  | intern |  |  | 2026-10-19 |  |
+| Nestlé Research | [R&D Data Science Intern](https://jobdetails.nestle.com/job/Orbe-R&D-Data-Science-Intern/1445507833/) | Romandie | (FR), EN C1 | intern |  | fixed-term | 2026-11-03 |  |
 
 ## Sources
 
@@ -76,7 +78,7 @@ Languages: `(FR)` = a plus, not required. Years = minimum years of experience as
 | KPMG | prospective | ok | 73 | 1 |
 | Lombard Odier | workday | ok | 18 | 1 |
 | Nestlé Research | sfcareer | ok | 10 | 2 |
-| Novartis | workday | ok | 30 | 19 |
+| Novartis | workday | failed | 0 | 0 |
 | PwC | workday | ok | 26 | 0 |
 | Roche | workday | ok | 49 | 21 |
 | Swiss Re | sfcareer | ok | 2 | 2 |

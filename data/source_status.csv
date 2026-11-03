@@ -16,6 +16,7 @@ date,source,employer,ats,ok,fetched,kept,error
 2026-11-03,ETH Zurich,ETH Zurich,htmllist,True,37,0,
 2026-11-03,EPFL,EPFL,sfcareer,True,25,1,
 2026-11-03,Roche,Roche,workday,True,49,21,
-2026-11-03,Novartis,Novartis,workday,True,30,19,
+2026-11-03,Novartis,Novartis,workday,False,0,0,"HTTPStatusError: Server error '520 <none>' for url 'https://novartis.wd3.myworkdayjobs.com/wday/cxs/novartis/Novartis_Careers/jobs'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/520"
 2026-11-03,Nestlé Research,Nestlé Research,sfcareer,True,10,2,
 2026-11-03,Cytel,Cytel,oracle,True,11,11,
