@@ -17,7 +17,7 @@ log = logging.getLogger(__name__)
 
 USER_AGENT = "Mozilla/5.0 (compatible; jobwatch/0.1)"
 MIN_INTERVAL = 1.0  # seconds between requests to the same host
-RETRY_STATUS = {429, 500, 502, 503, 504}
+RETRY_STATUS = {429, 500, 502, 503, 504, 520, 521, 522, 523, 524}  # 52x: Cloudflare
 
 
 class RobotsDisallowed(Exception):
